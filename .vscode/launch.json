@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - quick_sort",
+            "request": "launch",
+            "mainClass": "quick_sort"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - QuickSort",
             "request": "launch",
             "mainClass": "QuickSort"
