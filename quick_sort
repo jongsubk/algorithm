@@ -1,0 +1,8 @@
+import java.io.*;
+
+public class QuickSort {
+
+  public void static main(String[] args) {
+    System.out.println("Test");
+  }
+}
