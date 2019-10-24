@@ -4,8 +4,31 @@ public class quick_sort {
 
   public static void main(String[] args) {
 
-    int arr[] = { 3,2,1,4,5,9,8,7,6 };
+    int arr[] = { 3, 5, 2, 1, 4 };
+
+    quickSort(arr, 0, arr.length-1);
+
     printArray(arr);
+  }
+
+  private static void quickSort(int[] arr, int s, int e) {
+    
+    if( s >= e ) { return; }
+
+    int left = s;
+    int right = e;
+    int pivot = arr[(s+e)/2];
+
+    while( s < e ) {
+      
+      while( arr[s] < pivot ) { s++; }
+      while( arr[e] > pivot ) { e--; }
+
+      swap(arr, s, e);
+    }
+
+    quickSort(arr, left, e-1);
+    quickSort(arr, e+1, right);
   }
 
   private static void printArray(int[] arr) {
@@ -19,7 +42,4 @@ public class quick_sort {
     arr[i] = arr[j];
     arr[j] = temp;
   }
-
-
-
 }
