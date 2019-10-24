@@ -27,8 +27,9 @@ public class quick_sort {
       swap(arr, s, e);
     }
 
-    quickSort(arr, left, e-1);
-    quickSort(arr, e+1, right);
+    //s == p == (index of pivot)
+    quickSort(arr, left, s-1);
+    quickSort(arr, s+1, right);
   }
 
   private static void printArray(int[] arr) {
