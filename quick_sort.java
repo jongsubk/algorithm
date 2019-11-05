@@ -27,7 +27,7 @@ public class quick_sort {
       swap(arr, s, e);
     }
 
-    //s == p == (index of pivot)
+    //s == e == (index of pivot)
     quickSort(arr, left, s-1);
     quickSort(arr, s+1, right);
   }
