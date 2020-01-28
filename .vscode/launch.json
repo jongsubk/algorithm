@@ -1,16 +1,19 @@
 {
     "configurations": [
+        
         {
-            "type": "java",
-            "name": "CodeLens (Launch) - quick_sort",
+            "type": "cppdbg",
+            "program": "${workspaceRoot}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceRoot}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "name": "gcc.exe build and config active file",
             "request": "launch",
-            "mainClass": "quick_sort"
+
         },
-        {
-            "type": "java",
-            "name": "CodeLens (Launch) - QuickSort",
-            "request": "launch",
-            "mainClass": "QuickSort"
-        }
+
     ]
 }
