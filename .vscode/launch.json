@@ -1,19 +1,16 @@
 {
     "configurations": [
-        
-        {
-            "type": "cppdbg",
-            "program": "${workspaceRoot}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceRoot}",
-            "environment": [],
-            "externalConsole": true,
-            "MIMode": "gdb",
-            "name": "gcc.exe build and config active file",
-            "request": "launch",
-
-        },
+    {
+        "name": "(msvc) Launch",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/22_Generate_Parentheses.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false
+    },
 
     ]
 }
