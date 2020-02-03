@@ -9,10 +9,13 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "1323_Maximum_69_Number.exe",
-          "1323_Maximum_69_Number.cpp"
+          "55_Jump_Game.exe",
+          "55_Jump_Game.cpp"
         ],
-        "group": "build",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
         "presentation": {
           "reveal": "always"
         },
@@ -32,10 +35,7 @@
         "problemMatcher": [
           "$gcc"
         ],
-        "group": {
-          "kind": "build",
-          "isDefault": true
-        }
+        "group": "build"
       }
     ]
 }

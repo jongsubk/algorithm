@@ -4,7 +4,7 @@
         "name": "(msvc) Launch",
         "type": "cppvsdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/22_Generate_Parentheses.exe",
+        "program": "${workspaceFolder}/55_Jump_Game.exe",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
