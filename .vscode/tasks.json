@@ -9,8 +9,8 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "55_Jump_Game.exe",
-          "55_Jump_Game.cpp"
+          "1277_Count_Square_Submatrices_with_All_Ones.exe",
+          "1277_Count_Square_Submatrices_with_All_Ones.cpp"
         ],
         "group": {
           "kind": "build",
