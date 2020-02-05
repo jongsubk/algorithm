@@ -4,7 +4,7 @@
         "name": "(msvc) Launch",
         "type": "cppvsdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/1277_Count_Square_Submatrices_with_All_Ones.exe",
+        "program": "${workspaceFolder}/DP_Coin_Change.exe",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",

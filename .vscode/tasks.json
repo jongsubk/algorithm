@@ -9,8 +9,8 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "1277_Count_Square_Submatrices_with_All_Ones.exe",
-          "1277_Count_Square_Submatrices_with_All_Ones.cpp"
+          "DP_Coin_Change.exe",
+          "DP_Coin_Change.cpp"
         ],
         "group": {
           "kind": "build",
