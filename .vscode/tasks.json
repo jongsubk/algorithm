@@ -9,8 +9,8 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "42_Trapping_Rain_Water.exe",
-          "42_Trapping_Rain_Water.cpp"
+          "LG_BuildingGarden.exe",
+          "LG_BuildingGarden.cpp"
         ],
         "group": {
           "kind": "build",
