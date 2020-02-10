@@ -9,8 +9,8 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "DP_Coin_Change.exe",
-          "DP_Coin_Change.cpp"
+          "42_Trapping_Rain_Water.exe",
+          "42_Trapping_Rain_Water.cpp"
         ],
         "group": {
           "kind": "build",
