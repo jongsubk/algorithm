@@ -79,10 +79,6 @@ int main() {
   //vector<contextElement>::iterator last = std::unique(v1.begin(), v1.end());
   //v1.erase(last, v1.end());
 
-  for(size_t i = 0; i < v1.size();i++)
-  {
-    //cout << v1[i].context <<"  ";
-  }
 
     vector<int> v = { 6,1,3,2,4,7 };
     cout << maxProfit(v);

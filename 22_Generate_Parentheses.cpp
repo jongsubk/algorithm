@@ -1,5 +1,7 @@
 /* 22_Generate_Parentheses */
 // https://leetcode.com/problems/generate-parentheses/
+// ★★★★
+
 #include <iostream>
 #include <vector>
 using namespace std;
