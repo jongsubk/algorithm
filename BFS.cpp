@@ -1,5 +1,24 @@
+/*
+본사에서 공장까지 도로를 건설하려고 한다.
+최소 비용으로 도로를 건설하고자 하는데, 
+그러기 위해서는 토지 구입 비용을 최소화 해야 한다.
+지도 정보가 주어졌을때, 토지를 구입하는데 드는 최소 비용을 구하시오.
+[요구사항] 
+ 1. 지도는 정사각형 모양으로 크기 N(N=자연수, 2<=N<=100)
+ 2. 토지는 1*1 크기로 나눠져 있으며 문자열로 각 토지 구입 가격이 제공됨
+[입력]
+3
+041
+253
+620
+8
+*/
+
 #include <stdio.h>
 #include <limits.h>
+#include <queue>
+
+using namespace std;
 #define MAX 110
  
 int N;//지도 크기
@@ -10,7 +29,7 @@ int dc[] = { 1, -1, 0, 0 };
 int dr[] = { 0, 0, 1, -1 };
  
 typedef struct {
-    int r, c; // price
+    int r, c; //row.column => price
 } ROAD;
  
 ROAD q[MAX*MAX*MAX];
@@ -43,14 +62,13 @@ int valid(int r, int c, int p) {
     if ( visited[r][c] <= p ) return 0;
     return 1;
 }
- 
+
 int BFS() {
     ROAD road;
     int nr, nc, np;
-     
     push(0, 0);
     visited[0][0] = map[0][0];
-     
+    
     while (rp<wp) {
         pop(&road);
         //if ( (road.x == N-1) && (road.y == N-1) ) return visited[N-1][N-1];
@@ -66,7 +84,6 @@ int BFS() {
     }
      
     return visited[N-1][N-1];
-     
 }
  
 int main(void){
@@ -77,6 +94,6 @@ int main(void){
     ans = BFS();
      
     printf("%d\n", ans);        //  정답 출력
- 
+
     return 0;
 }
