@@ -9,8 +9,8 @@
           "/EHsc",
           "/Zi",
           "/Fe:",
-          "LG_BuildingGarden.exe",
-          "LG_BuildingGarden.cpp"
+          "BSP_559_Maximum_Depth_of_N_ary_Tree.exe",
+          "BSP_559_Maximum_Depth_of_N_ary_Tree.cpp"
         ],
         "group": {
           "kind": "build",

@@ -25,8 +25,8 @@ int N;//지도 크기
 int map[MAX][MAX];//지도 정보
 int visited[MAX][MAX]; // 방문여부
  
-int dc[] = { 1, -1, 0, 0 };
-int dr[] = { 0, 0, 1, -1 };
+int dc[] = { 1, -1, 0, 0 }; //direction row
+int dr[] = { 0, 0, 1, -1 }; //direction column
  
 typedef struct {
     int r, c; //row.column => price
@@ -63,6 +63,45 @@ int valid(int r, int c, int p) {
     return 1;
 }
 
+bool isValid(int r, int c, int p) {
+    if( r<0 || r>=N || c<0 || c>=N ) { return false; }
+    if( visited[r][c] <= p ) { return false; }
+
+    return true;
+}
+
+int BFS_2() {
+    ROAD road;
+    road.r=0, road.c=0;
+
+    queue<ROAD> myq;
+    myq.push(road);
+
+    visited[0][0] = map[0][0];
+
+    while( ! myq.empty() ) {
+        int nr, nc, np;
+        road = myq.front(); 
+        myq.pop();
+
+        for(int i=0; i<4; i++) {
+            nr = road.r + dr[i];
+            nc = road.c + dc[i];
+            np = visited[road.r][road.c] + map[nr][nc];
+
+            if( isValid(nr, nc, np) == false ) { continue; }
+
+            road.r = nr;  road.c = nc;
+            myq.push(road);
+
+            visited[nr][nc] = np;
+        }
+    }
+
+    return visited[N-1][N-1];
+}
+
+
 int BFS() {
     ROAD road;
     int nr, nc, np;
@@ -91,7 +130,7 @@ int main(void){
     Input_Data();       //  입력 함수
      
     //  코드를 작성하세요
-    ans = BFS();
+    ans = BFS_2();
      
     printf("%d\n", ans);        //  정답 출력
 
