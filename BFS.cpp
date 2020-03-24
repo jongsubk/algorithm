@@ -110,8 +110,7 @@ int BFS() {
     
     while (rp<wp) {
         pop(&road);
-        //if ( (road.x == N-1) && (road.y == N-1) ) return visited[N-1][N-1];
-         
+        
         for(int i=0; i<4; i++) {
             nc = road.c + dc[i];
             nr = road.r + dr[i];
@@ -130,9 +129,20 @@ int main(void){
     Input_Data();       //  입력 함수
      
     //  코드를 작성하세요
-    ans = BFS_2();
+    //ans = BFS_2();
+    ans = BFS();
      
     printf("%d\n", ans);        //  정답 출력
 
     return 0;
 }
+
+/*
+Debug with data below. should be 24.
+5
+04543
+73459
+15474
+85432
+47160
+*/
