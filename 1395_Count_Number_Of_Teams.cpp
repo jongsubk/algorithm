@@ -3,20 +3,39 @@
 
 using namespace std;
 
-
 int numTeams(vector<int>& rating) {
-        int size{(int)rating.size()}, total{0};
-        std::vector<std::vector<int>> dp(size, {0, 0, 0, 0});
-        for(int i{1}; i < size; ++i) {
-            for(int j{0}; j < i; ++j) {
-                if(rating[j] < rating[i]) ++dp[i][0], dp[i][1] += dp[j][0];
-                else ++dp[i][2], dp[i][3] += dp[j][2];
+    int teams = 0;
+    int n = rating.size();
+    
+    for(int i=0; i<n; i++) {
+        for(int j=i+1; j<n; j++) {
+            for(int k=j+1; k<n; k++) {
+                if( (rating[i] < rating[j] && rating[j] < rating[k]) || (rating[i] > rating[j] && rating[j] > rating[k]) ) {
+                    teams++;
+                }
             }
-            total += dp[i][1] + dp[i][3];
         }
-        return total;
     }
+    
+    return teams;
+}
 
+#if 0
+int numTeams(vector<int>& rating) {
+    int res = 0;
+    for (int i = 1; i < rating.size() - 1; i++) {
+        int less[2] = {}, greater[2] = {};
+        for (auto j = 0; j < rating.size(); j++) {
+            if (rating[i] < rating[j])
+                less[j > i]++;
+            if (rating[i] > rating[j])
+                greater[j > i]++;
+        }
+        res += less[0] * greater[1] + greater[0] * less[1];
+    }
+    return res;
+}
+#endif
 
 int main() {
     vector<int> rating = { 2,5,3,4,6 };
