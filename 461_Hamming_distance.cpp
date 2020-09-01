@@ -1,7 +1,7 @@
+//Brian Kernighanfs Algorithm:
 #include <iostream>
 
 using namespace std;
-
 
 int hammingDistance(int x, int y) {
 	int result = 0;
