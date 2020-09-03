@@ -1,2 +1,2 @@
 # algorithm
-algorithm example
+algorithm exercise by Jongsub Kim
