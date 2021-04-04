@@ -1,7 +1,10 @@
 //https://leetcode.com/problems/design-a-stack-with-increment-operation/submissions/
 
 #include <iostream>
+#include <Vector>
+#include <algorithm>
 using namespace std;
+
 
 class CustomStack {
 public:
@@ -35,10 +38,33 @@ public:
 };
 
 
+int maxCoins(vector<int>& piles) {
+    
+    int sum = 0;
+    
+    sort(piles.begin(), piles.end(), [](int a, int b) {
+        return a<b;
+    });
+
+    int n = piles.size();
+    
+    for(int i= n-2; i>= n/3; i-=2) {
+        sum += piles[i];
+    }
+    
+    return sum;
+}
+
+
 int main()
 {
-    CustomStack st(3);
-    st.push(1);
-    st.push(2);
-    cout << st.pop();
+    //CustomStack st(3);
+    //st.push(1);
+    //st.push(2);
+    //cout << st.pop();
+
+    vector<int> v = { 2,4,5, 7, 8, 9 };
+    cout << "maxCoins: " << maxCoins(v);
+
+
 }
